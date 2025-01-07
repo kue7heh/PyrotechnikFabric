@@ -1,0 +1,12 @@
+{
+  "effect.pyrotechnik.aflame": "Aflame",
+  "effect.pyrotechnik.frozen": "Freezing",
+
+  "item.minecraft.potion.effect.fire_potion": "Fire potion",
+  "item.minecraft.splash_potion.effect.fire_potion": "Splash fire potion",
+  "item.minecraft.lingering_potion.effect.fire_potion": "Lingering fire potion",
+
+  "item.minecraft.potion.effect.freeze_potion": "freezing potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash freezing potion",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering freezing potion"
+}

@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "pyrotechnik.kue7heh.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

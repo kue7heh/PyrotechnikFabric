@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "pyrotechnikkue7heh",
+	"version": "${1}",
+	"name": "Pyrotechnik",
+	"description": "boom",
+	"authors": [
+		"Kue7heh"
+	],
+	"contact": {
+		"email": "kue7heh@gmail.com",
+		"sources": "https://github.com/kue7heh/PyrotechnikFabric"
+	},
+	"license": "MIT",
+	"icon": "assets/pyrotechnik/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"pyrotechnik.kue7heh.Pyrotechnik"
+		],
+		"client": [
+			"pyrotechnik.kue7heh.PyrotechnikClient"
+		]
+	},
+	"mixins": [
+		"pyrotechnik.mixins.json",
+		{
+			"config": "pyrotechnik.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.4",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
