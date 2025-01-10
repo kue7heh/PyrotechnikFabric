@@ -1,4 +1,5 @@
 package pyrotechnik.kue7heh.effect;
+
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -10,7 +11,7 @@ public class FreezeEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.setInPowderSnow(true);
+        entity.setFrozenTicks(150);
         return super.applyUpdateEffect(entity, amplifier);
     }
 

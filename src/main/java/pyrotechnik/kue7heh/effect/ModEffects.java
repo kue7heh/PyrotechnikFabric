@@ -14,7 +14,7 @@ public class ModEffects {
     public static final RegistryEntry<StatusEffect> AFLAME = registerStatusEffect("aflame",
             new FireEffect(StatusEffectCategory.NEUTRAL, 0xff6f00)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                            Identifier.of(Pyrotechnik.MOD_ID, "aflame"), -0.5f,
+                            Identifier.of(Pyrotechnik.MOD_ID, "aflame"), -0.3f,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
     public static final RegistryEntry<StatusEffect> FROZEN = registerStatusEffect("frozen",
             new FreezeEffect(StatusEffectCategory.NEUTRAL, 0x9effff)

@@ -29,7 +29,7 @@ public class Pyrotechnik implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-			builder.registerPotionRecipe(Potions.FIRE_RESISTANCE, Items.BLAZE_POWDER, ModPotions.FIRE_POTION);
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.FIRE_CHARGE, ModPotions.FIRE_POTION);
 			builder.registerPotionRecipe(Potions.AWKWARD, Items.BLUE_ICE, ModPotions.FREEZE_POTION);
 		});
 	}
