@@ -17,7 +17,7 @@ public class ModPotions {
             new Potion(new StatusEffectInstance(ModEffects.FROZEN,600,0)));
 
     public static final RegistryEntry<Potion> EXPLOSIVE_POTION = registerPotion("explosive_potion",
-            new Potion(new StatusEffectInstance(ModEffects.EXPLOSIVE,80,0)));
+            new Potion(new StatusEffectInstance(ModEffects.EXPLOSIVE,100,0)));
 
     private static RegistryEntry<Potion> registerPotion(String name, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(Pyrotechnik.MOD_ID, name), potion);

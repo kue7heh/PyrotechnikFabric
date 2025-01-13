@@ -8,13 +8,14 @@ import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pyrotechnik.kue7heh.config.PyrotechnikConfig;
 import pyrotechnik.kue7heh.effect.ModEffects;
 import pyrotechnik.kue7heh.init.EnchantmentInit;
 import pyrotechnik.kue7heh.potion.ModPotions;
 
 public class Pyrotechnik implements ModInitializer {
 	public static final String MOD_ID = "pyrotechnik";
-
+	public static final PyrotechnikConfig CONFIG = PyrotechnikConfig.createAndLoad();
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.

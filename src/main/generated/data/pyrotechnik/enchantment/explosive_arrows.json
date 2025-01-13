@@ -4,6 +4,37 @@
     "translate": "enchantment.pyrotechnik.explosive_arrows"
   },
   "effects": {
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": -1.0,
+            "per_level_above_first": -1.0
+          }
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "direct_attacker",
+          "predicate": {
+            "type": "#minecraft:arrows"
+          }
+        }
+      }
+    ],
+    "minecraft:hit_block": [
+      {
+        "effect": {
+          "type": "pyrotechnik:explosive_arrows",
+          "amount": {
+            "type": "minecraft:linear",
+            "base": 1.0,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ],
     "minecraft:post_attack": [
       {
         "affected": "victim",

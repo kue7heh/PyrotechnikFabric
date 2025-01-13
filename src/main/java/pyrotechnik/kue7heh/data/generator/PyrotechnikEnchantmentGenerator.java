@@ -1,5 +1,10 @@
 package pyrotechnik.kue7heh.data.generator;
 
+import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
+import net.minecraft.loot.condition.EntityPropertiesLootCondition;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.predicate.entity.EntityPredicate;
+import net.minecraft.registry.tag.EntityTypeTags;
 import pyrotechnik.kue7heh.enchantments.effects.ExplosiveArrowsEnchantmentEffect;
 import pyrotechnik.kue7heh.init.EnchantmentInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -40,7 +45,14 @@ public class PyrotechnikEnchantmentGenerator extends FabricDynamicRegistryProvid
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER,
                         EnchantmentEffectTarget.VICTIM,
-                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F))));
+                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)))
+                .addEffect(EnchantmentEffectComponentTypes.HIT_BLOCK,
+                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)))
+                .addEffect(
+                        EnchantmentEffectComponentTypes.DAMAGE,
+                        new AddEnchantmentEffect(EnchantmentLevelBasedValue.linear(-1F)),
+                        EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().type(EntityTypeTags.ARROWS).build())
+                ));
     }
 
     private static void register(Entries entries, RegistryKey<Enchantment> key, Enchantment.Builder builder, ResourceCondition... resourceConditions) {

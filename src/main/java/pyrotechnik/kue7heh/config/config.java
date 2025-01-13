@@ -7,5 +7,5 @@ import io.wispforest.owo.config.annotation.Modmenu;
 @Modmenu(modId = "pyrotechnik")
 
 public class config {
-    public static boolean explosive_arrows_enchantment_destroys_blocks = false;
+    public boolean explosive_arrows_enchantment_destroys_blocks = false;
 }
