@@ -37,8 +37,8 @@ public class PyrotechnikEnchantmentGenerator extends FabricDynamicRegistryProvid
                                 itemLookup.getOrThrow(ItemTags.CROSSBOW_ENCHANTABLE),
                                 5, // probability of showing up in the enchantment table
                                 3, // max level
-                                Enchantment.leveledCost(1, 10), // cost per level (base)
-                                Enchantment.leveledCost(1, 20), // cost per level (max)
+                                Enchantment.leveledCost(5, 7), // cost per level (base)
+                                Enchantment.leveledCost(10, 10), // cost per level (max)
                                 4, // anvil applying cost
                                 AttributeModifierSlot.HAND
                         ))
