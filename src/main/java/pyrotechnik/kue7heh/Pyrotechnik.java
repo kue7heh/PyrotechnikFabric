@@ -5,9 +5,11 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pyrotechnik.kue7heh.effect.ModEffects;
+import pyrotechnik.kue7heh.init.EnchantmentInit;
 import pyrotechnik.kue7heh.potion.ModPotions;
 
 public class Pyrotechnik implements ModInitializer {
@@ -25,12 +27,18 @@ public class Pyrotechnik implements ModInitializer {
 		// Proceed with mild caution.
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
+		EnchantmentInit.load();
 
 		LOGGER.info("Hello Fabric world!");
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-			builder.registerPotionRecipe(Potions.AWKWARD, Items.FIRE_CHARGE, ModPotions.FIRE_POTION);
-			builder.registerPotionRecipe(Potions.AWKWARD, Items.BLUE_ICE, ModPotions.FREEZE_POTION);
+			builder.registerPotionRecipe(Potions.FIRE_RESISTANCE, Items.FIRE_CHARGE, ModPotions.FIRE_POTION);
+			builder.registerPotionRecipe(Potions.SLOWNESS, Items.BLUE_ICE, ModPotions.FREEZE_POTION);
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.TNT, ModPotions.EXPLOSIVE_POTION);
 		});
+
+	}
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
 	}
 }

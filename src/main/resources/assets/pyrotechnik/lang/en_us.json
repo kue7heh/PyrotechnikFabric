@@ -1,12 +1,19 @@
 {
   "effect.pyrotechnik.aflame": "Aflame",
   "effect.pyrotechnik.frozen": "Freezing",
+  "effect.pyrotechnik.explosive": "Explosive",
 
   "item.minecraft.potion.effect.fire_potion": "Fire potion",
   "item.minecraft.splash_potion.effect.fire_potion": "Splash fire potion",
   "item.minecraft.lingering_potion.effect.fire_potion": "Lingering fire potion",
 
-  "item.minecraft.potion.effect.freeze_potion": "freezing potion",
+  "item.minecraft.potion.effect.freeze_potion": "Freezing potion",
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash freezing potion",
-  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering freezing potion"
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering freezing potion",
+
+  "item.minecraft.potion.effect.explosive_potion": "Explosive potion",
+  "item.minecraft.splash_potion.effect.explosive_potion": "Splash explosive potion",
+  "item.minecraft.lingering_potion.effect.explosive_potion": "Lingering explosive potion",
+
+  "enchantment.pyrotechnik.explosive_arrows": "Explosive arrows"
 }

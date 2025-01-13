@@ -12,15 +12,16 @@ import pyrotechnik.kue7heh.Pyrotechnik;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> AFLAME = registerStatusEffect("aflame",
-            new FireEffect(StatusEffectCategory.NEUTRAL, 0xff6f00)
-                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                            Identifier.of(Pyrotechnik.MOD_ID, "aflame"), -0.3f,
-                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+            new FireEffect(StatusEffectCategory.HARMFUL, 0xff6f00));
+
     public static final RegistryEntry<StatusEffect> FROZEN = registerStatusEffect("frozen",
-            new FreezeEffect(StatusEffectCategory.NEUTRAL, 0x9effff)
+            new FreezeEffect(StatusEffectCategory.HARMFUL, 0x9effff)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                             Identifier.of(Pyrotechnik.MOD_ID, "frozen"), -0.5f,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
+    public static final RegistryEntry<StatusEffect> EXPLOSIVE = registerStatusEffect("explosive",
+            new ExplosionEffect(StatusEffectCategory.HARMFUL, 0x000000));
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {

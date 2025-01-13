@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
-	"id": "pyrotechnikkue7heh",
-	"version": "${1}",
+	"id": "pyrotechnik",
+	"version": "${1.2}",
 	"name": "Pyrotechnik",
 	"description": "boom",
 	"authors": [
@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"pyrotechnik.kue7heh.PyrotechnikClient"
+		],
+		"fabric-datagen": [
+			"pyrotechnik.kue7heh.PyrotechnikDataGenerator"
 		]
 	},
 	"mixins": [
@@ -36,6 +39,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"another-mod": "owo-lib"
 	}
 }
