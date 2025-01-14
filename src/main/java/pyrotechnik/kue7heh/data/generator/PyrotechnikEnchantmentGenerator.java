@@ -1,9 +1,13 @@
 package pyrotechnik.kue7heh.data.generator;
 
 import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
+import net.minecraft.entity.EntityType;
+import net.minecraft.item.CrossbowItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.predicate.entity.EntityPredicate;
+import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.EntityTypeTags;
 import pyrotechnik.kue7heh.enchantments.effects.ExplosiveArrowsEnchantmentEffect;
 import pyrotechnik.kue7heh.init.EnchantmentInit;
@@ -41,15 +45,17 @@ public class PyrotechnikEnchantmentGenerator extends FabricDynamicRegistryProvid
                                 Enchantment.leveledCost(10, 10), // cost per level (max)
                                 4, // anvil applying cost
                                 AttributeModifierSlot.HAND
-                        ))
+                        )
+                )
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER,
                         EnchantmentEffectTarget.VICTIM,
-                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)))
+                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)),
+                        EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().type(EntityTypeTags.ARROWS)))
                 .addEffect(EnchantmentEffectComponentTypes.HIT_BLOCK,
-                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)))
-                .addEffect(
-                        EnchantmentEffectComponentTypes.DAMAGE,
+                        new ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue.linear(1F, 0.5F)),
+                        EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS, EntityPredicate.Builder.create().type(EntityTypeTags.ARROWS)))
+                .addEffect(EnchantmentEffectComponentTypes.DAMAGE,
                         new AddEnchantmentEffect(EnchantmentLevelBasedValue.linear(-1F)),
                         EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().type(EntityTypeTags.ARROWS).build())
                 ));

@@ -27,6 +27,7 @@ public record ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue amount
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity target, Vec3d pos) {
         float power = this.amount.getValue(level);
+
         if (target instanceof LivingEntity) {
                 world.createExplosion(
                         null,
@@ -37,7 +38,7 @@ public record ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue amount
                         target.getZ(),
                         power,
                         false,
-                        World.ExplosionSourceType.TRIGGER); // ARROW COUNTS AS TARGET BTW!
+                        World.ExplosionSourceType.TRIGGER);
             } else {
             world.createExplosion(
                     null,
