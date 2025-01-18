@@ -14,10 +14,12 @@ import net.minecraft.world.explosion.AdvancedExplosionBehavior;
 import net.minecraft.world.explosion.ExplosionBehavior;
 import java.util.Optional;
 
+import static pyrotechnik.kue7heh.PyrotechnikConfig.explosiveArrowsDestroyBlocks;
+
 public record ExplosiveArrowsEnchantmentEffect(EnchantmentLevelBasedValue amount) implements EnchantmentEntityEffect {
 
     private static final ExplosionBehavior EXPLOSION_BEHAVIOR = new AdvancedExplosionBehavior
-            (false, true, Optional.empty(),Optional.empty());
+            (explosiveArrowsDestroyBlocks, true, Optional.empty(),Optional.empty());
 
     public static final MapCodec<ExplosiveArrowsEnchantmentEffect> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(

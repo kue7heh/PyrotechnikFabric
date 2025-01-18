@@ -15,5 +15,6 @@
   "item.minecraft.splash_potion.effect.explosive_potion": "Splash explosive potion",
   "item.minecraft.lingering_potion.effect.explosive_potion": "Lingering explosive potion",
 
-  "enchantment.pyrotechnik.explosive_arrows": "Explosive arrows"
+  "enchantment.pyrotechnik.explosive_arrows": "Explosive arrows",
+  "modid.midnightconfig.explosiveArrowsDestroyBlocks": "Does explosive arrows enchantment explosion destroy blocks?"
 }

@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "pyrotechnik",
-	"version": "${1.3}",
+	"version": "${1.4}",
 	"name": "Pyrotechnik",
 	"description": "boom",
 	"authors": [
@@ -39,6 +39,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "owo-lib"
+		"another-mod": "midnightlib"
 	}
 }
